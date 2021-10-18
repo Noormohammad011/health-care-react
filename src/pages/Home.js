@@ -1,6 +1,9 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
 import AboutUs from '../components/AboutUs'
+import Blog from '../components/Blog'
+import Contact from '../components/Contact'
+import Gallery from '../components/Gallery'
 import Services from '../components/Services'
 
 import { courasolIndex } from '../import'
@@ -31,9 +34,11 @@ const Home = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-
       <AboutUs />
-      <Services/>
+      <Services />
+      <Gallery />
+      <Contact />
+      <Blog />
     </div>
   )
 }

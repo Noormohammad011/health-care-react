@@ -67,14 +67,7 @@ const Header = () => {
               >
                 Services
               </Nav.Link>
-              <Nav.Link
-                as={HashLink}
-                to='/home#experts'
-                smooth
-                scroll={(el) => scrollWithOffset(el)}
-              >
-                Experts
-              </Nav.Link>
+
               <Nav.Link
                 as={HashLink}
                 to='/home#gallery'
@@ -98,6 +91,14 @@ const Header = () => {
                 scroll={(el) => scrollWithOffset(el)}
               >
                 Blog
+              </Nav.Link>
+              <Nav.Link
+                as={HashLink}
+                to='/home#contact'
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
+                Contact
               </Nav.Link>
               <Nav.Link
                 as={HashLink}

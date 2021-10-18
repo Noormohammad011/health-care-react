@@ -5,6 +5,11 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Layout from './Layout/Layout'
 import AboutUs from './components/AboutUs'
+import NotFoundPage from './pages/NotFoundPage'
+import Blog from './components/Blog'
+import Gallery from './components/Gallery'
+import Contact from './components/Contact'
+
 function App() {
   //Preloader Start
   const [loading, setLoading] = useState(false)
@@ -39,13 +44,13 @@ function App() {
         <Router>
           <Layout>
             <Switch>
-              {/* <Route path='/' component={Home} exact />
-            <Route path='/about' component={AboutPage} exact />
-            <Route path='/contact' component={ContactUsPage} exact />
-            <Route path='/faq' component={FaqPage} exact />
-            <Route path='*' component={NotFoundPage} exact /> */}
-              <Route page='/home' component={Home} exact />
-              <Route page='/about' component={AboutUs} exact />
+              <Route path='/' component={Home} exact />
+              <Route path='/home' component={Home} exact />
+              <Route path='/about' component={AboutUs} exact />
+              <Route path='/blog' component={Blog} exact />
+              <Route path='/gallery' component={Gallery} exact />
+              <Route path='/contact' component={Contact} exact />
+              <Route path='*' component={NotFoundPage} exact />
             </Switch>
           </Layout>
         </Router>

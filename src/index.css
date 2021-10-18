@@ -14,3 +14,10 @@ font-family: 'Roboto', sans-serif; */
 .fontAdd{
   font-family: 'Cormorant Garamond', serif;
 }
+
+
+.sliderimg{
+  width: 100%;
+  height: 400px;
+  object-fit: fill
+}
