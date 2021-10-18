@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600&family=Roboto&display=swap');
 main {
-  min-height: 110vh;
+  min-height: 200vh;
 }
 
 *{
@@ -10,3 +10,7 @@ main {
 }
 /* font-family: 'Cormorant Garamond', serif;
 font-family: 'Roboto', sans-serif; */
+
+.fontAdd{
+  font-family: 'Cormorant Garamond', serif;
+}

@@ -6,12 +6,19 @@ const Header = () => {
   const [changeHeader, setChangeHeader] = useState(false)
 
   //header change function
-  const onChangeHeader = () => {
+  const onChangeHeader = (e) => {
+    e.preventDefault()
+
     if (window.scrollY >= 50) {
       setChangeHeader(true)
     } else {
       setChangeHeader(false)
     }
+  }
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset
+    const yOffset = -100
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' })
   }
 
   //change header by scrolling
@@ -35,33 +42,69 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbarScroll' />
           <Navbar.Collapse id='navbarScroll'>
-            <Nav
-              className='ms-auto my-2 my-lg-0'
-              style={{ maxHeight: '100px' }}
-              navbarScroll
-            >
-              <Nav.Link as={HashLink} to='/home#home'>
+            <Nav className='ms-auto my-2 my-lg-0'>
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to='/home#home'
+                scroll={(el) => scrollWithOffset(el)}
+              >
                 Home
               </Nav.Link>
-              <Nav.Link as={HashLink} to='/home#about'>
+              <Nav.Link
+                smooth
+                as={HashLink}
+                to='/home#about'
+                scroll={(el) => scrollWithOffset(el)}
+              >
                 About
               </Nav.Link>
-              <Nav.Link as={HashLink} to='/home#services'>
+              <Nav.Link
+                as={HashLink}
+                to='/home#services'
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
                 Services
               </Nav.Link>
-              <Nav.Link as={HashLink} to='/home#experts'>
+              <Nav.Link
+                as={HashLink}
+                to='/home#experts'
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
                 Experts
               </Nav.Link>
-              <Nav.Link as={HashLink} to='/home#gallery'>
+              <Nav.Link
+                as={HashLink}
+                to='/home#gallery'
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
                 Gallery
               </Nav.Link>
-              <Nav.Link as={HashLink} to='/home#doctors'>
+              <Nav.Link
+                as={HashLink}
+                to='/home#doctors'
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
                 Doctors
               </Nav.Link>
-              <Nav.Link as={HashLink} to='/home#blog'>
+              <Nav.Link
+                as={HashLink}
+                to='/home#blog'
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
                 Blog
               </Nav.Link>
-              <Nav.Link as={HashLink} to='/home#login'>
+              <Nav.Link
+                as={HashLink}
+                to='/home#login'
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
                 Login
               </Nav.Link>
             </Nav>

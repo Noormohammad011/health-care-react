@@ -4,6 +4,7 @@ import { css } from '@emotion/react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Layout from './Layout/Layout'
+import AboutUs from './components/AboutUs'
 function App() {
   //Preloader Start
   const [loading, setLoading] = useState(false)
@@ -44,6 +45,7 @@ function App() {
             <Route path='/faq' component={FaqPage} exact />
             <Route path='*' component={NotFoundPage} exact /> */}
               <Route page='/home' component={Home} exact />
+              <Route page='/about' component={AboutUs} exact />
             </Switch>
           </Layout>
         </Router>

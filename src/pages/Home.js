@@ -1,18 +1,20 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
+import AboutUs from '../components/AboutUs'
+import Services from '../components/Services'
 
 import { courasolIndex } from '../import'
 
 const Home = () => {
   return (
-    <>
+    <div id='home'>
       <Carousel>
         {courasolIndex.map((x) => (
           <Carousel.Item key={x.id} interval={x.intervalTime}>
             <img
               className='d-block'
               src={x.image}
-              style={{ height: 600, width: '100%', margin: 0 }}
+              style={{ height: 600, width: '100%' }}
               alt={x.image}
             />
             <Carousel.Caption>
@@ -29,8 +31,10 @@ const Home = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-      
-    </>
+
+      <AboutUs />
+      <Services/>
+    </div>
   )
 }
 
