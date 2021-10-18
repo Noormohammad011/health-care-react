@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import HashLoader from 'react-spinners/HashLoader'
 import { css } from '@emotion/react'
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Layout from './Layout/Layout'
 function App() {
   //Preloader Start
   const [loading, setLoading] = useState(false)
@@ -17,7 +19,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 5000)
+    }, 1000)
   }, [])
   //End of Preloader
 
@@ -33,9 +35,18 @@ function App() {
           />
         </div>
       ) : (
-        <div className='container'>
-          <h1>This is starting now</h1>
-        </div>
+        <Router>
+          <Layout>
+            <Switch>
+              {/* <Route path='/' component={Home} exact />
+            <Route path='/about' component={AboutPage} exact />
+            <Route path='/contact' component={ContactUsPage} exact />
+            <Route path='/faq' component={FaqPage} exact />
+            <Route path='*' component={NotFoundPage} exact /> */}
+              <Route page='/home' component={Home} exact />
+            </Switch>
+          </Layout>
+        </Router>
       )}
     </>
   )
