@@ -24,8 +24,8 @@ const Header = () => {
         variant='dark'
         className={
           changeHeader
-            ? 'bg-danger text-uppercase shadow-lg'
-            : 'bg-dark text-uppercase shadow-sm'
+            ? 'bg-danger text-uppercase shadow-lg mb-0'
+            : 'bg-dark text-uppercase shadow-sm mb-0'
         }
         style={{ fontFamily: 'Cormorant Garamond' }}
       >
@@ -37,7 +37,7 @@ const Header = () => {
           <Navbar.Collapse id='navbarScroll'>
             <Nav
               className='ms-auto my-2 my-lg-0'
-              style={{ maxHeight: '200px' }}
+              style={{ maxHeight: '100px' }}
               navbarScroll
             >
               <Nav.Link as={HashLink} to='/home#home'>

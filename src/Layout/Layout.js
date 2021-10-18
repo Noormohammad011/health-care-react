@@ -6,8 +6,8 @@ const Layout = ({children}) => {
     return (
       <>
         <Header/>
-        <main className='py-3'>
-          <div className='container'>{children}</div>
+        <main>
+          <div>{children}</div>
         </main>
         <Footer />
       </>
