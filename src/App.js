@@ -3,6 +3,8 @@ import HashLoader from 'react-spinners/HashLoader'
 import { css } from '@emotion/react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import SignUp from './pages/SignUp'
+import Login from './pages/Login'
 import Layout from './Layout/Layout'
 import AboutUs from './components/AboutUs'
 import NotFoundPage from './pages/NotFoundPage'
@@ -11,6 +13,10 @@ import Gallery from './components/Gallery'
 import Contact from './components/Contact'
 import Services from './components/Services'
 import ServicesDetail from './pages/ServicesDetail'
+import ForgotPassword from './pages/ForgotPassword'
+import { AuthProvider } from './contexts/AuthContext'
+import PrivateRoute from './ProtectedRoute/PrivateRoute'
+
 
 function App() {
   //Preloader Start
@@ -44,19 +50,28 @@ function App() {
         </div>
       ) : (
         <Router>
-          <Layout>
-            <Switch>
-              <Route path='/' component={Home} exact />
-              <Route path='/home' component={Home} exact />
-              <Route path='/services' component={Services} exact />
-              <Route path='/services/:id' component={ServicesDetail} exact />
-              <Route path='/about' component={AboutUs} exact />
-              <Route path='/blog' component={Blog} exact />
-              <Route path='/gallery' component={Gallery} exact />
-              <Route path='/contact' component={Contact} exact />
-              <Route path='*' component={NotFoundPage} exact />
-            </Switch>
-          </Layout>
+          <AuthProvider>
+            <Layout>
+              <Switch>
+                <Route path='/' component={Home} exact />
+                <Route path='/home' component={Home} exact />
+                <Route path='/services' component={Services} exact />
+                <PrivateRoute
+                  path='/services/:id'
+                  component={ServicesDetail}
+                  exact
+                />
+                <Route path='/about' component={AboutUs} exact />
+                <Route path='/blog' component={Blog} exact />
+                <Route path='/gallery' component={Gallery} exact />
+                <Route path='/contact' component={Contact} exact />
+                <Route path='/signup' component={SignUp} exact />
+                <Route path='/login' component={Login} exact />
+                <Route path='/forgot-password' component={ForgotPassword} />
+                <Route path='*' component={NotFoundPage} exact />
+              </Switch>
+            </Layout>
+          </AuthProvider>
         </Router>
       )}
     </>
