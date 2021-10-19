@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { useHistory } from 'react-router'
 import useAuth from './../hooks/useAuth'
-import Button from '@restart/ui/esm/Button'
+
 const Header = () => {
   const [changeHeader, setChangeHeader] = useState(false)
 

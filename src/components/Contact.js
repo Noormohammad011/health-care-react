@@ -1,6 +1,10 @@
 import React from 'react'
+import useAuth from '../hooks/useAuth'
+import { useHistory } from 'react-router-dom'
 
 const Contact = () => {
+  const { user } = useAuth()
+  const history = useHistory()
   return (
     <section id='contact' className='my-5'>
       <div className='container'>
@@ -9,9 +13,7 @@ const Contact = () => {
         </h1>
       </div>
       <div className='container my-5'>
-        <div
-          className='d-flex flex-column align-items-center'
-        >
+        <div className='d-flex flex-column align-items-center'>
           <form className='row g-3'>
             <div className='col-md-6'>
               <label htmlFor='inputEmail4' className='form-label'>
@@ -55,9 +57,19 @@ const Contact = () => {
 
             <div className='col-12'>
               <div className='d-grid '>
-                <button className='btn btn-primary' type='button'>
-                  Submit
-                </button>
+                {user ? (
+                  <button className='btn btn-primary' type='button'>
+                    Submit
+                  </button>
+                ) : (
+                  <button
+                    className='btn btn-primary'
+                    type='button'
+                    onClick={() => history.push('/login')}
+                  >
+                    Submit
+                  </button>
+                )}
               </div>
             </div>
           </form>
