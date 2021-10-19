@@ -37,8 +37,8 @@ const Home = () => {
       <AboutUs />
       <Services />
       <Gallery />
-      <Contact />
       <Blog />
+      <Contact />
     </div>
   )
 }

@@ -9,6 +9,8 @@ import NotFoundPage from './pages/NotFoundPage'
 import Blog from './components/Blog'
 import Gallery from './components/Gallery'
 import Contact from './components/Contact'
+import Services from './components/Services'
+import ServicesDetail from './pages/ServicesDetail'
 
 function App() {
   //Preloader Start
@@ -46,6 +48,8 @@ function App() {
             <Switch>
               <Route path='/' component={Home} exact />
               <Route path='/home' component={Home} exact />
+              <Route path='/services' component={Services} exact />
+              <Route path='/services/:id' component={ServicesDetail} exact />
               <Route path='/about' component={AboutUs} exact />
               <Route path='/blog' component={Blog} exact />
               <Route path='/gallery' component={Gallery} exact />

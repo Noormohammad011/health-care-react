@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
+import { services } from '../import'
 const Services = () => {
   return (
     <section id='services' className='my-5'>
@@ -10,82 +11,29 @@ const Services = () => {
       </div>
 
       <div className='container mt-4'>
-        <div className='row row-cols-1 row-cols-md-3'>
-          <div className='col'>
-            <div className='card gap-2 my-2'>
-              {/* <img src="..." className="card-img-top" alt="..."> */}
-              <div className='card-body'>
-                <h5 className='card-title'>Card title</h5>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href='#' className='btn btn-primary'>
-                  Go somewhere
-                </a>
+        <div className='row row-cols-1 row-cols-md-3 g-4'>
+          {services.map((x) => (
+            <div className='col' key={x.id}>
+              <div className='card h-100'>
+                <img src={x.image} className='card-img-top' alt={x.title} />
+                <div className='card-body'>
+                  <h5 className='card-title'>{x.title}</h5>
+                  <p className='card-text'>
+                    {x.description.slice(0, 30) + '...'}
+                  </p>
+                </div>
+                <div className='card-footer'>
+                  <Link to={`/services/${x.id}`}>
+                    <div className='d-grid gap-2'>
+                      <button className='btn btn-primary' type='button'>
+                        Button
+                      </button>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className='col'>
-            <div className='card gap-2 my-2'>
-              {/* <img src="..." className="card-img-top" alt="..."> */}
-              <div className='card-body'>
-                <h5 className='card-title'>Card title</h5>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href='#' className='btn btn-primary'>
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='col'>
-            <div className='card gap-2 my-2'>
-              {/* <img src="..." className="card-img-top" alt="..."> */}
-              <div className='card-body'>
-                <h5 className='card-title'>Card title</h5>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href='#' className='btn btn-primary'>
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='col'>
-            <div className='card gap-2 my-2'>
-              {/* <img src="..." className="card-img-top" alt="..."> */}
-              <div className='card-body'>
-                <h5 className='card-title'>Card title</h5>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href='#' className='btn btn-primary'>
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='col'>
-            <div className='card gap-2 my-2'>
-              {/* <img src="..." className="card-img-top" alt="..."> */}
-              <div className='card-body'>
-                <h5 className='card-title'>Card title</h5>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href='#' className='btn btn-primary'>
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

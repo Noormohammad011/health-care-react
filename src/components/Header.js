@@ -78,14 +78,6 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link
                 as={HashLink}
-                to='/home#doctors'
-                smooth
-                scroll={(el) => scrollWithOffset(el)}
-              >
-                Doctors
-              </Nav.Link>
-              <Nav.Link
-                as={HashLink}
                 to='/home#blog'
                 smooth
                 scroll={(el) => scrollWithOffset(el)}

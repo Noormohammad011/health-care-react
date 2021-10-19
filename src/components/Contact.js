@@ -11,7 +11,6 @@ const Contact = () => {
       <div className='container my-5'>
         <div
           className='d-flex flex-column align-items-center'
-          style={{ height: '80vh', width: '100%' }}
         >
           <form className='row g-3'>
             <div className='col-md-6'>
