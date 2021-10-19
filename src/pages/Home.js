@@ -2,7 +2,6 @@ import React from 'react'
 import { Carousel } from 'react-bootstrap'
 import AboutUs from '../components/AboutUs'
 import Blog from '../components/Blog'
-import Contact from '../components/Contact'
 import Gallery from '../components/Gallery'
 import Services from '../components/Services'
 
@@ -38,7 +37,7 @@ const Home = () => {
       <Services />
       <Gallery />
       <Blog />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   )
 }
