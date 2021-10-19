@@ -12,7 +12,7 @@ const ServicesDetail = ({ match }) => {
       </Link>
       <Row>
         <Col md={6}>
-          <Image src={filtered.image} alt={filtered.name} />
+          <Image src={filtered.image} alt={filtered.name} fluid />
         </Col>
         <Col md={6}>
           <h1>{filtered.title}</h1>
