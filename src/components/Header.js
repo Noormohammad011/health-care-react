@@ -43,7 +43,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand href='#home'>
-            <i className='fas fa-clinic-medical fa-2x'></i>
+            Ibne<i className='fas fa-clinic-medical fa-2x'>Sina</i>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbarScroll' />
           <Navbar.Collapse id='navbarScroll'>

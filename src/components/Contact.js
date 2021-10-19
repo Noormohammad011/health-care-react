@@ -1,10 +1,8 @@
 import React from 'react'
-import useAuth from '../hooks/useAuth'
-import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
-  const { user } = useAuth()
-  const history = useHistory()
+  
   return (
     <section id='contact' className='my-5'>
       <div className='container'>
@@ -57,19 +55,9 @@ const Contact = () => {
 
             <div className='col-12'>
               <div className='d-grid '>
-                {user ? (
-                  <button className='btn btn-primary' type='button'>
+                <Link to='/'className='btn btn-primary' type='button'>
                     Submit
-                  </button>
-                ) : (
-                  <button
-                    className='btn btn-primary'
-                    type='button'
-                    onClick={() => history.push('/login')}
-                  >
-                    Submit
-                  </button>
-                )}
+                </Link>
               </div>
             </div>
           </form>

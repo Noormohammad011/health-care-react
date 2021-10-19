@@ -66,7 +66,7 @@ export default function SignUp() {
   return (
     <div className='mt-5'>
       <FormContainer>
-        <h1 className='text-center'>Sign in</h1>
+        <h1 className='text-center'>Sign Up</h1>
 
         <Form onSubmit={handleSubmit}>
           {Inputs.map((input) => (
@@ -82,7 +82,7 @@ export default function SignUp() {
             </Form.Group>
           ))}
           <Button type='submit' variant='primary' className='mt-3 text-center'>
-            Login
+            Sign Up
           </Button>
           <hr />
           <span>Or</span>
@@ -97,7 +97,7 @@ export default function SignUp() {
 
         <Row className='py-3'>
           <Col>
-            <Link to='/signin'>
+            <Link to='/login'>
               <p className='text-primary text-center my-5'>
                 Already have an account ? SignIn
               </p>
