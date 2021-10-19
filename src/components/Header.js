@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import { HashLink } from 'react-router-hash-link'
-
 import { Container, Nav, Navbar } from 'react-bootstrap'
+import { useHistory } from 'react-router'
+import useAuth from './../hooks/useAuth'
+import Button from '@restart/ui/esm/Button'
 const Header = () => {
   const [changeHeader, setChangeHeader] = useState(false)
+
+  const history = useHistory()
+  const { user, signOutUser } = useAuth()
 
   //header change function
   const onChangeHeader = (e) => {
@@ -92,14 +97,22 @@ const Header = () => {
               >
                 Contact
               </Nav.Link>
-              <Nav.Link
-                as={HashLink}
-                to='/home#login'
-                smooth
-                scroll={(el) => scrollWithOffset(el)}
-              >
-                Login
-              </Nav.Link>
+              {user.displayName ? (
+                <>
+                  <div className='d-flex justify-content-between'>
+                    <Nav.Link onClick={signOutUser}>SignOut</Nav.Link>
+                    <p className='text-white'>{user.displayName}</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className='d-flex justify-content-between align-items-center'>
+                    <Nav.Link onClick={() => history.push('/login')}>
+                      Sign In
+                    </Nav.Link>
+                  </div>
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
