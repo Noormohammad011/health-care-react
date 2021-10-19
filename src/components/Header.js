@@ -91,7 +91,7 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link
                 as={HashLink}
-                to='/home#contact'
+                to='/contact'
                 smooth
                 scroll={(el) => scrollWithOffset(el)}
               >

@@ -64,7 +64,7 @@ function App() {
                 <Route path='/about' component={AboutUs} exact />
                 <Route path='/blog' component={Blog} exact />
                 <Route path='/gallery' component={Gallery} exact />
-                <Route path='/contact' component={Contact} exact />
+                <PrivateRoute path='/contact' component={Contact} exact />
                 <Route path='/login' component={Login} exact />
                 <Route path='/signup' component={SignUp} exact />
                 <Route path='*' component={NotFoundPage} exact />
