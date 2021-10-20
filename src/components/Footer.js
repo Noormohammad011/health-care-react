@@ -39,7 +39,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <span>
-                    <i className='far fa-address-book fa-2x my-2'>
+                    <i class='fas fa-mobile-alt fa-2x my-2'>
                       <span className='mx-2'>+01754-867577</span>{' '}
                     </i>
                   </span>
