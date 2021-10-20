@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <>
       <div className='container-fluid bg-dark text-white'>
-<<<<<<< HEAD
         <div className='container'>
           <div className='row row-cols-1 row-cols-md-3 d-flex justify-content-between'>
             <div className='col d-flex justify-content-center align-items-center'>
@@ -15,9 +14,7 @@ const Footer = () => {
                     nature cures the disease.
                   </p>
                 </blockquote>
-                <figcaption className='blockquote-footer'>
-                  Voltire
-                </figcaption>
+                <figcaption className='blockquote-footer'>Voltire</figcaption>
               </figure>
             </div>
             <div className='col'>
@@ -48,31 +45,10 @@ const Footer = () => {
                   </span>
                 </div>
               </div>
-
               <br />
             </div>
           </div>
         </div>
-=======
-        
-          <div className='container'>
-            <div className='row row-cols-1 row-cols-md-6'>
-              <div className='col'>
-                <i className='far fa-address-book'>
-                  <span>+01754-867577</span>{' '}
-                </i>
-              </div>
-              <div className='col'>
-                <h1>For Better Inquery</h1>
-                <br />
-                <span>
-                  <i className='far fa-address-book'></i>
-                  <i class='fas fa-envelope-open'></i>
-                </span>
-              </div>
-            </div>
-          </div>
->>>>>>> 9b586f62cb3a61a96ddcb809632dabcfc4ef8ae6
       </div>
     </>
   )
