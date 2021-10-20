@@ -1,26 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Loader from './Loader'
+import {articles} from '../import'
 const Blog = () => {
-  const [news, setNews] = useState([])
+  
   const [isLoading, setIsLoading] = useState(false)
   useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true)
-
-      const { data } = await axios.get(
-        'https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=0f2ecf7650b243ae99472c2a08cffbaf'
-      )
-
-      setNews(data.articles)
+    setIsLoading(true)
+    setTimeout(() => {
       setIsLoading(false)
-    }
-
-    fetchData()
+    }, 1000)
   }, [])
+  
 
   return (
-    <section id='blog' className='my-5'>
+    <section id='blog' className='my-5 heading_title'>
       <div className='container'>
         <h1 className='text-center text-uppercase'>
           <span style={{ borderBottom: '4px solid green' }}>Blog</span>
@@ -31,10 +25,10 @@ const Blog = () => {
           {isLoading ? (
             <Loader />
           ) : (
-            news
-              ?.map((x, index) => (
+            articles
+              ?.map((x) => (
                 <div className='col'>
-                  <div className='card my-2 h-100' key={index}>
+                  <div className='card my-2 h-100' key={x.id}>
                     <img
                       src={x.urlToImage}
                       className='card-img-top'

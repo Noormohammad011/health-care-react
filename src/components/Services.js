@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <section id='services' className='my-5'>
       <div className='container'>
-        <h1 className='text-center text-uppercase'>
+        <h1 className='text-center text-uppercase heading_title'>
           <span style={{ borderBottom: '4px solid green' }}>Services</span>
         </h1>
       </div>

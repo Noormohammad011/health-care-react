@@ -10,7 +10,7 @@ import { courasolIndex } from '../import'
 const Home = () => {
   return (
     <div id='home'>
-      <Carousel>
+      <Carousel className='d-none d-md-block'>
         {courasolIndex.map((x) => (
           <Carousel.Item key={x.id} interval={x.intervalTime}>
             <img

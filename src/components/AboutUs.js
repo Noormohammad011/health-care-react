@@ -4,7 +4,7 @@ import AboutImage from '../images/about-img-02.jpg'
 
 const AboutUs = () => {
   return (
-    <section id='about' className='my-5'>
+    <section id='about' className='my-5 heading_title'>
       <div className='container'>
         <h1 className='text-center text-uppercase'>
           <span style={{ borderBottom: '4px solid green' }}>About Us</span>

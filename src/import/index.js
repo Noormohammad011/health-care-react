@@ -308,8 +308,35 @@ const articles = [
     publishedAt: '2021-10-20T03:57:39Z',
     content:
       'US researchers have developed an electrocardiogram-reading algorithm that can detect subtle signs of heart failure. Heart failure, or congestive heart failure, occurs when the heart pumps less blood … [+2079 chars]',
-  }
- 
+  },
 ]
 
-export { courasolIndex, images, services, articles }
+const faq = [
+  {
+    id: 1,
+    accordian_header: 'What type of health plans do you accept?',
+    accordian_body: `For your convenience, we file most types of insurance, including Medicare, Medicaid, Individual and Commercial plans. For a complete list of insurance companies and accepted Health plans, please visit our Insurance page under Patient Resources. Insurance plans accepted`,
+  },
+  {
+    id: 2,
+    accordian_header: `What if I don't have insurance?`,
+    accordian_body: `Doctor’s Medical Center knows the importance of your health and the added costs of being healthy, that’s why we offer competitive prices on all our services avoiding that your health becomes a financial problem.`,
+  },
+  {
+    id: 3,
+    accordian_header: `What if I don't have transportation?`,
+    accordian_body: `Doctor’s Medical Center offers courtesy transportation for most insurances to and from doctors and specialty offices.`,
+  },
+  {
+    id: 4,
+    accordian_header: 'Can I be seen without an appointment?',
+    accordian_body: `Calling our office at the first sign of illness helps to ensure that you receive an appointment time sooner rather than later. Normally, we are able to schedule same-day appointments for those requiring immediate non – emergency care.`,
+  },
+  {
+    id: 5,
+    accordian_header: 'Can I communicate with my provider?',
+    accordian_body: `Yes, you can contact your personalized care team, by calling our main number, 305.685.5688. You can also register in our practice’s Patient Portal (myhealthrecord.com). By registering, you will be able to send direct messages to your physician regarding general questions and/or medication refills.`,
+  },
+]
+
+export { courasolIndex, images, services, articles, faq }

@@ -97,6 +97,14 @@ const Header = () => {
               >
                 Contact
               </Nav.Link>
+              <Nav.Link
+                as={HashLink}
+                to='/faq'
+                smooth
+                scroll={(el) => scrollWithOffset(el)}
+              >
+                Faq
+              </Nav.Link>
               {user.displayName ? (
                 <>
                   <div className='d-flex justify-content-between'>
@@ -109,6 +117,11 @@ const Header = () => {
                   <div className='d-flex justify-content-between align-items-center'>
                     <Nav.Link onClick={() => history.push('/login')}>
                       Sign In
+                    </Nav.Link>
+                  </div>
+                  <div className='d-flex justify-content-between align-items-center'>
+                    <Nav.Link onClick={() => history.push('/signup')}>
+                      Sign Up
                     </Nav.Link>
                   </div>
                 </>

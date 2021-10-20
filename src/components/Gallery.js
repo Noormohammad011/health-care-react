@@ -10,7 +10,7 @@ const handleDragStart = (e) => e.preventDefault()
   return (
     <section id='gallery' className='my-5'>
       <div className='container'>
-        <h1 className='text-center text-uppercase'>
+        <h1 className='text-center text-uppercase heading_title'>
           <span style={{ borderBottom: '4px solid green' }}>Gallery</span>
         </h1>
       </div>

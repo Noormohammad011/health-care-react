@@ -46,7 +46,7 @@ export default function Login() {
   return (
     <div className='mt-5'>
       <FormContainer>
-        <h1 className='text-center'>Sign in</h1>
+        <h1 className='text-center heading_title'>Sign in</h1>
 
         <Form onSubmit={handleSubmit}>
           {Inputs.map((input) => (

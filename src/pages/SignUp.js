@@ -66,7 +66,7 @@ export default function SignUp() {
   return (
     <div className='mt-5'>
       <FormContainer>
-        <h1 className='text-center'>Sign Up</h1>
+        <h1 className='text-center heading_title'>Sign Up</h1>
 
         <Form onSubmit={handleSubmit}>
           {Inputs.map((input) => (

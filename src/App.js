@@ -16,6 +16,7 @@ import AuthProvider from './context/AuthProvider'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import PrivateRoute from './ProtectedRoute/PrivateRoute'
+import Faq from './pages/Faq'
 
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
                 <Route path='/blog' component={Blog} exact />
                 <Route path='/gallery' component={Gallery} exact />
                 <PrivateRoute path='/contact' component={Contact} exact />
+                <Route path='/faq' component={Faq} exact />
                 <Route path='/login' component={Login} exact />
                 <Route path='/signup' component={SignUp} exact />
                 <Route path='*' component={NotFoundPage} exact />
